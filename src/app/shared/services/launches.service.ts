@@ -20,7 +20,7 @@ export class LaunchesServices {
         let params: HttpParams = new HttpParams();
 
         for (const key in data) {
-            if (data.hasOwnProperty(key) && data[key])
+            if (data.hasOwnProperty(key) && ['number', 'string', 'boolean'].includes(typeof data[key]))
                 params = params.set(key, data[key].toString());
         }
         return params;

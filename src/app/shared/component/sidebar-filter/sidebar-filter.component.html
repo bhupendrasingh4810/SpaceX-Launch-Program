@@ -1,3 +1,3 @@
-<p className="text-center sub-heading">{{heading}}</p>
-<button *ngFor="let data of btnList" class="btn-filter" ngClass="{'selected': selectedValue === data.value}"
-    (click)="selectValue(data)">{{data.key}}</button>
+<p class="text-center sub-heading">{{heading}}</p>
+<button *ngFor="let data of btnList" class="btn-filter" [ngClass]="{'selected': selectedValue === data?.value}"
+    (click)="selectValue(data)">{{data?.key}}</button>

@@ -1,0 +1,13 @@
+.container {
+    display: inline-block;
+    width: 100%;
+    background-color: #f2f2f2;
+    .title {
+        color: #010101;
+        margin: 0 15px;
+    }
+    .main-content .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

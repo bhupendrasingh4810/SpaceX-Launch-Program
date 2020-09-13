@@ -1,0 +1,17 @@
+.sub-heading {
+    border-bottom: 2px solid #e5e4e1;
+}
+.btn-filter {
+    background-color: #c5e09b;
+    width: 40%;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 12px;
+    border: none;
+    outline: none;
+}
+.btn-filter:hover,
+.btn-filter:active,
+.btn-filter.selected {
+    background-color: #7cbb27;
+}

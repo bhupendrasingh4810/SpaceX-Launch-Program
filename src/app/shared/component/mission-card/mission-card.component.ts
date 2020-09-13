@@ -9,6 +9,6 @@ import { Component, Input } from "@angular/core";
 export class MissionCardComponent {
     @Input() mission: any;
 
-    defaultLaunchImage: string;
+    defaultLaunchImage: string = 'assets/images/logo192.png';
     constructor() { }
 }

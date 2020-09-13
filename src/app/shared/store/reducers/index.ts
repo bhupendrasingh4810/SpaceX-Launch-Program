@@ -1,10 +1,10 @@
 import { ActionReducerMap } from '@ngrx/store';
 import * as fromLaunches from './launches.reducer';
 
-export interface ReducerState {
+export interface AppState {
     launches: fromLaunches.LaunchesState;
 }
 
-export const reducers: ActionReducerMap<ReducerState> = {
+export const reducers: ActionReducerMap<AppState> = {
     launches: fromLaunches.reducer
 };

@@ -7,20 +7,16 @@ export const GET_LAUNCHES_FAILURE = '[Auth] Get Launches Failure';
 
 export class GetLaunchesAction implements Action {
     type = GET_LAUNCHES;
-    public payload: object;
-
-    constructor() { }
+    constructor(public payload: object) { }
 }
 
 export class GetLaunchesSuccessAction implements Action {
     type = GET_LAUNCHES_SUCCESS;
-
     constructor(public payload: any) { }
 }
 
 export class GetLaunchesFailureAction implements Action {
     type = GET_LAUNCHES_FAILURE;
-
     constructor(public payload: HttpErrorResponse) { }
 }
 

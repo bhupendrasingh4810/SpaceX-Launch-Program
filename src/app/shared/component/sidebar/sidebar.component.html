@@ -1,8 +1,11 @@
-<div className="sidebar">
-    <h3 className="heading">{{constant?.FILTERS}}</h3>
-    <app-sidebar-filter-component [heading]="constant?.LAUNCH_YEAR"></app-sidebar-filter-component>
+<div class="sidebar">
+    <h3 class="heading">{{constant?.FILTERS}}</h3>
+    <app-sidebar-filter-component [heading]="constant?.LAUNCH_YEAR" [btnList]="getLaunchYears()" (onSelect)="onSelectingLaunchYear($event)">
+    </app-sidebar-filter-component>
 
-    <app-sidebar-filter-component [heading]="constant?.LAUNCH_SUCCESS"></app-sidebar-filter-component>
+    <app-sidebar-filter-component [heading]="constant?.LAUNCH_SUCCESS" [btnList]="getBooleanValues()" (onSelect)="onSelectingLaunchSuccess($event)">
+    </app-sidebar-filter-component>
 
-    <app-sidebar-filter-component [heading]="constant?.LANDING_SUCCESS"></app-sidebar-filter-component>
+    <app-sidebar-filter-component [heading]="constant?.LANDING_SUCCESS" [btnList]="getBooleanValues()" (onSelect)="onSelectingLandingSuccess($event)">
+    </app-sidebar-filter-component>
 </div>
