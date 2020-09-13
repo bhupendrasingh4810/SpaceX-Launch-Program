@@ -4,21 +4,24 @@ import { MissionCardComponent } from './component/mission-card/mission-card.comp
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { SidebarFilterComponent } from './component/sidebar-filter/sidebar-filter.component';
 import { CommonModule } from '@angular/common';
+import { directives } from './directives';
 
 @NgModule({
     declarations: [
         MissionCardComponent,
         SidebarComponent,
-        SidebarFilterComponent
+        SidebarFilterComponent,
+        ...directives
     ],
     imports: [
-        CommonModule
+        CommonModule,
     ],
     exports: [
         MissionCardComponent,
         SidebarComponent,
         SidebarFilterComponent,
-        CommonModule
+        CommonModule,
+        ...directives
     ]
 })
 

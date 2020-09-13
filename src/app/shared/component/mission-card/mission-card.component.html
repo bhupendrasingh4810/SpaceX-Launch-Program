@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-image text-center">
-        <img [src]="mission?.links?.mission_patch_small ? mission?.links?.mission_patch_small : defaultLaunchImage"
+        <img appLazyLoad [src]="mission?.links?.mission_patch_small ? mission?.links?.mission_patch_small : defaultLaunchImage"
             [alt]="mission?.mission_name" />
     </div>
     <h5 class="mission">{{mission?.mission_name}} #{{mission?.flight_number}}</h5>
