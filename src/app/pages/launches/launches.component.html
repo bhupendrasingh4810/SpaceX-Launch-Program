@@ -1,0 +1,24 @@
+<div className="container">
+    <h1 className="title">{{constant?.PROJECT_TITLE}}</h1>
+    <div className="row">
+        <div className="col-3">
+            <!-- <Sidebar
+                onSelectingLaunchYear={onSelectingLaunchYear}
+                onSelectingLaunchSuccess={onSelectingLaunchSuccess}
+                onSelectingLandingSuccess={onSelectingLandingSuccess}
+            /> -->
+            <app-sidebar-component></app-sidebar-component>
+        </div>
+        <div className="col-9">
+            <div className="main-content">
+                <app-mission-card-component *ngFor="let mission of launches" [mission]="mission"></app-mission-card-component>
+                <div *ngIf="!launches" class="text-center">NO Result Found</div>
+                <!-- {
+                    launches && launches.length
+                        ? launches.map((mission, key) => <MissionCard key={key} mission={mission} />)
+                        : <div className="text-center">No result found</div>
+                } -->
+            </div>
+        </div>
+    </div>
+</div>

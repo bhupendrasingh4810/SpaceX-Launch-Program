@@ -1,0 +1,16 @@
+<div className="col-3" [ngStyle]="{paddingTop: 0}">
+    <div className="card">
+        <div className="card-image text-center">
+            <img [src]="mission?.links?.mission_patch_small ? mission?.links?.mission_patch_small : defaultLaunchImage"
+                [alt]="mission?.mission_name" />
+        </div>
+        <h5 className="mission">{{mission?.mission_name}} #{{mission?.flight_number}}</h5>
+        <p><b>Mission Ids:</b></p>
+        <ul>
+            <li *ngFor="let id of mission?.mission_id">{{id}}</li>
+        </ul>
+        <p><b>Launch Year: </b> {{mission?.launch_year}}</p>
+        <p><b>Successful Launch: </b> {{mission?.launch_success ? 'True' : 'False'}}</p>
+        <p><b>Successful Landing: </b> {{mission?.launch_landing ? 'True' : 'False'}}</p>
+    </div>
+</div>
